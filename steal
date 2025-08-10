@@ -68,7 +68,7 @@ end)
 
 
 local function ForcePart(v)
-	if v:IsA("Part") and not v:FindFirstChild('Weld') and not v.Anchored and not v.Parent:FindFirstChild("Humanoid") and not v.Parent:FindFirstChild("Head") and v.Name ~= "Handle" then
+	if v:IsA("Part") and not v:FindFirstChild('Weld') and not v:FindFirstChild('Attachment') and not v.Anchored and not v.Parent:FindFirstChild("Humanoid") and not v.Parent:FindFirstChild("Head") and v.Name ~= "Handle" then
 		for _, x in next, v:GetChildren() do
 			if x:IsA("BodyAngularVelocity") or x:IsA("BodyForce") or x:IsA("BodyGyro") or x:IsA("BodyPosition") or x:IsA("BodyThrust") or x:IsA("BodyVelocity") or x:IsA("RocketPropulsion") then
 				x:Destroy()
